@@ -19,7 +19,8 @@ app.post("/download", async (req, res) => {
 		const reel = req.body.reel;
 		const data = await instagramDl(reel);
 		return res.json(data[0]);
-	} catch {
+	} catch (err) {
+		console.log(err);
 		res.json({ error: "Some Internal Error Occured!" });
 	}
 });
