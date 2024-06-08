@@ -1,0 +1,8 @@
+# +required Version of the endpoint configuration YAML
+version: 0.1
+
+# +required List of endpoints to create
+endpoints:
+    - name: API SERVICE
+      port: 3000
+      type: REST
