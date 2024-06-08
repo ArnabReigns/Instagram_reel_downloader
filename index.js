@@ -15,6 +15,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.post("/download", async (req, res) => {
+	console.log(req.body);
+
 	try {
 		const reel = req.body.reel;
 		const data = await instagramDl(reel);
