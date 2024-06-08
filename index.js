@@ -1,7 +1,15 @@
 const express = require("express");
+const cors = require("cors");
 const instagramDl = require("@sasmeee/igdl");
 const app = express();
 const port = 3000;
+
+app.use(
+	cors({
+		origin: "*",
+		allowedHeaders: "*",
+	})
+);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
